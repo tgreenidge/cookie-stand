@@ -1,0 +1,11 @@
+nav {
+  border-bottom: 1px solid black;
+}
+
+#logo {
+  width: 20%;
+}
+
+#logo img {
+  width: 100%;
+}
