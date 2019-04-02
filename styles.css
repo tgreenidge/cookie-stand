@@ -1,11 +1,26 @@
 nav {
   border-bottom: 1px solid black;
+  height: 100px;
+  padding: .5em;
 }
 
 #logo {
   width: 20%;
+  float: left;
 }
 
 #logo img {
   width: 100%;
+}
+
+#nav-bar {
+  margin-left: 1em;
+  width: 70%;
+  float: left;
+  font-size: 2em;
+  line-height: 2em;
+}
+
+#nav-bar a {
+  text-decoration: none;
 }
