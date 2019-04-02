@@ -24,3 +24,18 @@ nav {
 #nav-bar a {
   text-decoration: none;
 }
+
+
+/* sales.html */
+table, th, td {
+  border: 1px solid black;
+  font-size: 1.25em;
+}
+
+th, td {
+  text-align: center;
+}
+
+table tr:last-child, table tr:first-child {
+  background-color: grey;
+}
