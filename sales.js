@@ -168,13 +168,46 @@ var alki = new SalmonCookiesStore('Alki', 2, 16, 4.6);
 
 /******************************** Render Information to sales.html ****************/
 
-// make a column headers for sales data
-makeTableColumnHeaders(salesTable, allStoreLocations[0]['storeHours'], 'Daily Location Total');
+var updateSalesTable = function() {
+  if (salesTable.innerText === ''){
+    // make a column headers for sales data on new page load
+    makeTableColumnHeaders(salesTable, allStoreLocations[0]['storeHours'], 'Daily Location Total');
 
-// display store data on tables
-for (var j = 0; j < allStoreLocations.length; j++){
-  allStoreLocations[j].render();
-}
+    // display store data on tables
+    for (var j = 0; j < allStoreLocations.length; j++){
+      allStoreLocations[j].render();
+    }
 
-makeTableColumnFooters(salesTable, allStoreTotalsByHour, totalDaySalesAcrossAllStores);
+    makeTableColumnFooters(salesTable, allStoreTotalsByHour, totalDaySalesAcrossAllStores);
+  } else {
+    //delete last row of existing table (footer) 
+    var numRowsInTable = salesTable.rows.length;
+    salesTable.deleteRow[numRowsInTable];
 
+    //insert new row to update (last element in allStoreLocations array)
+    allStoreLocations[allStoreLocations.length - 1].render();
+
+    //insert updated Footer
+    makeTableColumnFooters(salesTable, allStoreTotalsByHour, totalDaySalesAcrossAllStores);
+  }
+};
+
+
+/******************************** New Store Form Event Listeners ****************/
+
+//when user enters data to create new store, all input in collected from form on submit, and sales table is updated
+var newStoreForm = document.getElementById('new-store-form');
+newStoreForm.addEventListener('submit', function(event){
+  event.preventDefault();
+  var formData = event.target;
+  var newStoreLocationName = formData[1].value;
+  var newStoreMinCustomers = parseInt(formData[2].value);
+  var newStoreMaxCustomers = parseInt(formData[3].value);
+  var newStoreAverageCookieSale = parseFloat(formData[4].value);
+  var newStore = new SalmonCookiesStore(newStoreLocationName, newStoreMinCustomers, newStoreMaxCustomers, newStoreAverageCookieSale);
+  updateSalesTable();
+  newStoreForm.reset();
+});
+
+//when user refreshes page, update table
+updateSalesTable();
