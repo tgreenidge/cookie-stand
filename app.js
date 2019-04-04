@@ -1,3 +1,25 @@
+/************************************ Index.html js **************************/
+
+var cookieCutterImageDiv = document.getElementById('cookie-cutter');
+
+// changes image from cookie cutter to cookie on mouseover
+var handleChangeCookieCutterImage = function() {
+  var cookieCutterImage = cookieCutterImageDiv.getElementsByTagName('img')[0];
+  if(cookieCutterImage.getAttribute('src') === 'https://raw.githubusercontent.com/codefellows/seattle-201d56/master/class-09/lab-b/assets/cutter.jpeg') {
+    cookieCutterImage.src = 'https://raw.githubusercontent.com/codefellows/seattle-201d56/master/class-09/lab-b/assets/frosted-cookie.jpg';
+  } else {
+    cookieCutterImage.src = 'https://raw.githubusercontent.com/codefellows/seattle-201d56/master/class-09/lab-b/assets/cutter.jpeg';
+  }
+};
+
+// only do the following if cookie cutter image is on page
+if (cookieCutterImageDiv) {
+  cookieCutterImageDiv.addEventListener('mouseover', handleChangeCookieCutterImage);  
+  cookieCutterImageDiv.addEventListener('mouseout', handleChangeCookieCutterImage);
+}
+
+
+
 /************************************ helper functions **************************/
 // generates a random number between max and min inclusive
 var generateRandomNumber = function(min, max) {
