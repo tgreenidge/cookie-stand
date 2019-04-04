@@ -8,21 +8,35 @@
   <body>
     <header>
       <nav>
-        <div id="logo"><a href="/"><img src="https://raw.githubusercontent.com/codefellows/seattle-201d56/master/class-06/assets/salmon.png" alt="Salmon Cookies Logo"></a></div>
-        <div id="nav-bar"><a href="sales.html">Sales</a></div>
+        <div id="logo"><a href="/"><img src="https://raw.githubusercontent.com/codefellows/seattle-201d56/master/class-06/assets/salmon.png" alt="Salmon Cookies Logo"></a><p>Salmon Cookies</p></div>
+        <div id="nav-bar"><a href="/">Home</a> | <a href="sales.html">Sales</a></div>
       </nav>
     </header>
 
     </main>
-    <div id="sales-info">
-      <h1>Sales</h1>
-      <table id="sales-table">
+      <div id="sales-info">
+        <form id="new-store-form">
+          <fieldset>
+            <h2>New Store Form</h2>
+            <input name="location-name" type="text" size="50" placeholder="Location Name" required /><br>
 
-      </table>
-    </div>
+            <input name="min-cust" type="number" placeholder="Min Customers Per Hour" required /><br>
+
+            <input name="max-cust" type="number" placeholder="Max Customers Per Hour" required /><br>
+
+            <input name="avg-cookie-sale" type="number" placeholder="Average Cookie Sale" step="0.01" required /><br>
+            
+            <button type="submit">Create new store</button>
+          </fieldset>
+        </form>
+
+        <table id="sales-table">
+
+        </table>
+      </div>
     </main>
 
-    
+    <script src="app.js"></script>
     <script src="sales.js"></script>
   </body>
 </html>
