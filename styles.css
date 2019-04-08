@@ -57,6 +57,7 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  margin-bottom: 4em;
 }
 
 .hero-image div {
@@ -75,13 +76,14 @@ nav {
 
 #store-info {
   text-align: center;
-  height: 400px;
+  height: 350px;
   width: 60%;
   background-color: #818181;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 4em;
+  margin-top: 5em;
+  margin-bottom: 4em;
   padding: 2em;
 }
 
@@ -94,9 +96,26 @@ nav {
 #store-info div div{
   width: 19%;
   float: left;
-  height: 250px;
+  height: 200px;
   background: #c0392b;
   margin: 3.5px;
+}
+
+#store-info img {
+  width: 50px;
+}
+
+#store-info ul {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  line-height: 1.5em;
+  margin-top: 2em;
+}
+
+#store-info li {
+  list-style: none;
 }
 
 #merch {
@@ -107,26 +126,48 @@ nav {
   width: 24%;;
   float: left;
   height: 300px;
+  border: 3px solid #c0392b;
+  background-color: #c0392b;
 }
 
 #merch div img {
   width: 100%;
-  height: 100%;
+  height: 90%;
+  margin: 0;
 }
 
 #merch div:nth-child(2) {
-  margin-left: 1%;
-  margin-right: 1%;
+  margin-left: .6%;
+  margin-right: .5%;
 }
 
 #merch div:nth-child(3) {
-  margin-left: .5%;
-  margin-right: 1%;
+  margin-left: .6%;
+  margin-right: .5%;
+}
+
+#merch div img + div{
+  width: 100%;
+  height: 7%;
+  float: none;
+  border: none;
+  text-align: center;
+  background-color: #818181 ;
+  margin: 0 !important;
+  font-weight: 900px;
+}
+
+main div:nth-child(3) {
+  margin-bottom: 4em;
 }
 
 footer {
-  height: 200px;
+  height: 150px;
+  clear: both;
   text-align: center;
+  background-color: #b1a5a5;
+  color: #c0392b;
+  padding-top: 3em;
 }
 
 /* sales.html */
@@ -139,6 +180,7 @@ table {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 4em;
   border-collapse: collapse;
 }
 
