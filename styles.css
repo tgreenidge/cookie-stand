@@ -3,7 +3,7 @@
 body {
   background-color: #f5f0f0;
   font-family: 'Roboto', sans-serif;
-  padding: 2em;
+  padding: 1em 2em 2em 2em;
 }
 
 nav {
@@ -32,7 +32,6 @@ nav {
 }
 
 #nav-bar {
-  /* margin-left: 1em; */
   margin-right: 1em;
   width: 70%;
   float: left;
@@ -50,6 +49,127 @@ nav {
   text-decoration: underline;
 }
 
+.hero-image {
+  background: url("https://raw.githubusercontent.com/codefellows/seattle-201d56/master/class-09/lab-b/assets/family.jpg");
+  height: 600px;
+  max-width: 100% !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 4em;
+}
+
+.hero-image div {
+  text-align: center;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-60%, -60%);
+  color: #c0392b;
+}
+
+.hero-image h1, .hero-image strong {
+  position: relative;
+  top: 5.15em;
+}
+
+#store-info {
+  text-align: center;
+  height: 350px;
+  width: 60%;
+  background-color: #818181;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5em;
+  margin-bottom: 4em;
+  padding: 2em;
+}
+
+#store-info div {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#store-info div div{
+  width: 19%;
+  float: left;
+  height: 200px;
+  background: #c0392b;
+  margin: 3.5px;
+}
+
+#store-info img {
+  width: 50px;
+}
+
+#store-info ul {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  line-height: 1.5em;
+  margin-top: 2em;
+}
+
+#store-info li {
+  list-style: none;
+}
+
+#merch {
+  margin-top: 2.5em;
+}
+
+#merch div {
+  width: 24%;;
+  float: left;
+  height: 300px;
+  border: 3px solid #c0392b;
+  background-color: #c0392b;
+}
+
+#merch div img {
+  width: 100%;
+  height: 90%;
+  margin: 0;
+}
+
+#merch div:nth-child(2) {
+  margin-left: .6%;
+  margin-right: .5%;
+}
+
+#merch div:nth-child(3) {
+  margin-left: .6%;
+  margin-right: .5%;
+}
+
+#merch div img + div{
+  width: 100%;
+  height: 7%;
+  float: none;
+  border: none;
+  text-align: center;
+  background-color: #818181 ;
+  margin: 0 !important;
+  font-weight: 900px;
+}
+
+main div:nth-child(3) {
+  margin-bottom: 4em;
+}
+
+footer {
+  height: 150px;
+  clear: both;
+  text-align: center;
+  background-color: #b1a5a5;
+  color: #c0392b;
+  padding-top: 3em;
+}
+
 /* sales.html */
 #sales-info {
   margin-top: 1.5em;
@@ -60,6 +180,7 @@ table {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 4em;
   border-collapse: collapse;
 }
 
